@@ -14,3 +14,10 @@ dayOfWeek[6] = "Воскресенье";
 Console.WriteLine(numOfDay < 1 || numOfDay > 7 ?
     "Такого дня недели не существует" :
     dayOfWeek[numOfDay - 1]);
+
+// Console.Write("Введите номер дня недели: ");
+// int numOfDay = int.Parse(Console.ReadLine()??"0");
+
+// string dayOfWeek = System.Globalization.CultureInfo.GetCultureInfo("ru-Ru").DateTimeFormat.GetDayName((DayOfWeek)Enum.GetValues(typeof(DayOfWeek)).GetValue(numOfDay));
+
+// Console.WriteLine(dayOfWeek);
