@@ -15,4 +15,4 @@ int pointY1 = getCoordinate("Y1");
 int pointX2 = getCoordinate("X2");
 int pointY2 = getCoordinate("Y2");
 
-Console.WriteLine(calcDistance(pointX1, pointX2, pointY1, pointY2));
+Console.WriteLine(calcDistance(pointX1, pointY1, pointX2, pointY2));
