@@ -12,7 +12,15 @@ int sumOfNumbers(int num){
     }
     return sum;
 }
-void Output(string message){
-    Console.WriteLine(message, sumOfNumbers(GetNum()));
+int GaussSum(int num){
+    return num*(num+1) / 2;
 }
-Output("Сумма чисел введенного числа: {0}");
+void Output(int num){
+    Console.WriteLine("Сумма чисел введенного числа: {0}", num);
+}
+DateTime startTimeSum = DateTime.Now;
+Output(sumOfNumbers(GetNum()));
+Console.WriteLine(DateTime.Now - startTimeSum);
+DateTime startTimeGauss = DateTime.Now;
+Output(GaussSum(GetNum()));
+Console.WriteLine(DateTime.Now - startTimeGauss);
