@@ -22,7 +22,7 @@ int[] GenArray(int num){
 
 void PrintArray(int[] array){
     Console.Write("[");
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length - 1; i++)
     {
         Console.Write("{0}, ", array[i]);
     }
