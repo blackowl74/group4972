@@ -101,3 +101,9 @@ This repository is for c# language assignments
 ### Task24
 
 
+
+### Task26
+
+Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+
+
