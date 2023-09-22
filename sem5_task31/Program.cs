@@ -49,7 +49,7 @@ void Output(string message, int posSum, int negSum){
     Console.WriteLine(message, posSum, negSum);
 }
 
-int[] randomIntArray= GenArray(12, -9, 9);
+int[] randomIntArray= GenArray(12, -9, 10);
 PrintArray(randomIntArray);
 Output("Сумма положительных чисел: {0}\nСумма отрицательных чисел: {1}", GetSum(randomIntArray).posSum, GetSum(randomIntArray).negSum);
 
