@@ -11,9 +11,10 @@ int GetRandomInt(int min, int max)
     return randomNum;
 }
 
-int[] GenArray(int num, int min, int max){
+int[] GenArray(int num, int min, int max)
+{
     int[] array = new int[num];
-    
+
     for (int i = 0; i < num; i++)
     {
         array[i] = GetRandomInt(min, max);
@@ -21,7 +22,8 @@ int[] GenArray(int num, int min, int max){
     return array;
 }
 
-void PrintArray(int[] array){
+void PrintArray(int[] array)
+{
     Console.Write("[");
     for (int i = 0; i < array.Length - 1; i++)
     {
@@ -30,25 +32,48 @@ void PrintArray(int[] array){
     Console.WriteLine("{0}]", array[array.Length - 1]);
 }
 
-int CountOfEvenInArray(int[] array){
+int CountOfEvenInArray(int[] array)
+{
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] % 2 == 0){
+        if (array[i] % 2 == 0)
+        {
             count++;
         }
     }
     return count;
 }
 
-void Output(string message, int[] array ){
-    PrintArray(array);
+void Output(string message, int[] array)
+{
     Console.WriteLine(message);
+    PrintArray(array);
 }
 
-int [] randomArray = GenArray(10, 100, 1000);
+// Пузырьковая сортировка
+
+void BubbleSort(int[] array)
+{
+    for (int i = 1; i < array.Length; i++)
+    {
+        for (int j = 0; j < array.Length - 1; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                int temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int[] randomArray = GenArray(10, 100, 1000);
 
 Output($"Количество четных элементов: {CountOfEvenInArray(randomArray)}", randomArray);
+BubbleSort(randomArray);
+Output("Отсортированный массив: ", randomArray);
 
 
 
