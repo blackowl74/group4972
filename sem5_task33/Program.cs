@@ -5,7 +5,7 @@ int GetNum(string message){
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int getRandomInt(int min, int max)
+int GetRandomInt(int min, int max)
 {
     int randomNum = new Random().Next(min, max);
     return randomNum;
@@ -16,7 +16,7 @@ int[] GenArray(int num, int min, int max){
     
     for (int i = 0; i < num; i++)
     {
-        array[i] = getRandomInt(min, max);
+        array[i] = GetRandomInt(min, max);
     }
     return array;
 }
