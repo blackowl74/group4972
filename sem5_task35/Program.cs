@@ -7,4 +7,52 @@
 // [10, 11, 12, 13, 14] -> 5
 
 
+int GetRandomInt(int min, int max)
+{
+    int randomNum = new Random().Next(min, max);
+    return randomNum;
+}
 
+int[] GenArray(int num, int min, int max)
+{
+    int[] array = new int[num];
+
+    for (int i = 0; i < num; i++)
+    {
+        array[i] = GetRandomInt(min, max);
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        Console.Write("{0}, ", array[i]);
+    }
+    Console.WriteLine("{0}]", array[array.Length - 1]);
+}
+
+int CountOfNumbersInArray(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] >= 10 && array[i] <= 99)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+void Output(string message, int[] array)
+{
+    PrintArray(array);
+    Console.WriteLine(message);
+}
+
+
+int[] randomArray = GenArray(123, -200, 200);
+Output($"Количество элементов, которые лежат в отрезке от 10 до 99: {CountOfNumbersInArray(randomArray)}", randomArray);
