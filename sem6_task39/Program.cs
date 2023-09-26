@@ -46,15 +46,25 @@ void ReverseArray(int[] array){
     }
 }
 
+int[] SwapNewArray(int[] array){
+    int[] SwapArray = new int[array.Length];
+    for (int i = 0; i < array.Length; i++)
+    {
+        SwapArray[i] = array[array.Length - i - 1];
+    }
+    return SwapArray;
+}
+
 void Output(string message, int[] array)
 {
     PrintArray(array);
     Console.WriteLine(message);
     ReverseArray(array);
     PrintArray(array);
+    PrintArray(SwapNewArray(array));
 }
 
 int[] randomArray = GenArray(GetNum("Введите размерность массива: "), GetNum("Введите минимальное значение элемента: "), GetNum("Введите максимальное значение элемента: "));
-Output("Реверсивный массив: ", randomArray);
+Output("Перевернутый массив: ", randomArray);
 
 
