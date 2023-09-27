@@ -25,6 +25,14 @@ int ConverToBinary(int num){
     } 
     return Convert.ToInt32(string.Join<int>("", array));
 }
+
+// вариант через рекурсию
+string ToBinaryRec(int num){
+    return num == 0 ? "" : ToBinaryRec(num / 2) + Convert.ToString(num % 2);
+}
+int number = GetNum("Введите число: ");
+Console.WriteLine("Перевод в двоичную через рекурсию: {0}", ToBinaryRec(number));
+
 void Output(string message){
     Console.WriteLine(message, ConverToBinary(GetNum("Введите число: ")));
 }
