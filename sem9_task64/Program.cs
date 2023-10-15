@@ -3,3 +3,17 @@
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
 
+int GetNum(string message){
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+void PrintNumsRec(int number){
+    if (number > 0)
+    {
+        Console.Write($"{number} ");
+        PrintNumsRec(--number);
+    }
+}
+
+PrintNumsRec(GetNum("Введите число: "));
